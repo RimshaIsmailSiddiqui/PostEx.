@@ -8,11 +8,20 @@ pipeline {
                 sh "mvn clean -f PostEx."
             }
         }
+        
+        stage('install')
+            steps {
+                sh "mvn install -f PostEx."
+            }
+          
+        }
+        
         stage('Test') {
             steps {
                 sh "mvn test -f PostEx."
             }
         }
+        
         stage('Package') {
             steps {
                 sh "mvn package -f PostEx."
