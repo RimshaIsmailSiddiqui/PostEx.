@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('git repo & clean') {
             steps {
-                bat "rmdir  /s /q PostEx."
+                
                 bat "git clone https://github.com/RimshaIsmailSiddiqui/PostEx..git"
                 bat "mvn clean -f PostEx."
             }
