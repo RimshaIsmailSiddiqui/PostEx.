@@ -8,16 +8,13 @@ pipeline {
                 bat "mvn clean -f PostEx."
             }
         }
-        stage('install') {
-            steps {
-                bat "mvn install -f PostEx."
-            }
-        }
+        
         stage('test') {
             steps {
                 bat "mvn test -f PostEx."
             }
         }
+        
         stage('package') {
             steps {
                 bat "mvn package -f PostEx."
