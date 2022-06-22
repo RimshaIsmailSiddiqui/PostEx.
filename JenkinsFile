@@ -29,8 +29,4 @@ pipeline {
             }
         }
     }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/master
+
